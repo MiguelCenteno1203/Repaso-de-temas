@@ -1,11 +1,16 @@
 #include <stdio.h>
 int main ()
-{
+{ 
 int arreglo[] = {2,4,6,8,10};
-int tamaño = 5;
+//int tamaño = 5;
+int *ptr;
 
-for (int i = 0; i < tamaño; i++)
+ptr = &arreglo[0];
+
+for (int i = 0; i < 5; i++)
 {
-    printf("%d" ,arreglo[i]);
+    printf("arreglo[%d] = %d" ,i, arreglo[i]);
+    ptr = &arreglo[i];
+    printf("%d\n", *ptr);
 }
 }
